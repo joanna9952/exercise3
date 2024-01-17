@@ -36,8 +36,8 @@ class Sonnet(Document):
 
         # Extracting sonnet number from the title
         title_parts = sonnet_data['title'].split(':')  # Splits it into two parts
-        title = str(title_parts[1].strip())  # Extracting the title
-        sonnet_id = int(title_parts[0].split()[-1].strip())  # Extracting and converting to int
+        title = str(title_parts[1].strip())  # Extracts the title
+        sonnet_id = int(title_parts[0].split()[-1].strip())  # Extracts and converts to int
         lines = sonnet_data['lines']
         super().__init__(lines)
         self.id = sonnet_id
@@ -114,7 +114,7 @@ for matching_sonnet in matching_sonnets_from_query:
 
 
 def user_interface():
-    # Assume sonnet_instances is a list of Sonnet instances
+    
     index = Index(sonnet_instances)
 
     print("Reading sonnets...")
